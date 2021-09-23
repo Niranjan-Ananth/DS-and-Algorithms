@@ -1,3 +1,6 @@
+import time
+from array_generator import random_array_generator
+
 def merge(arr, p, q, r):
     n1 = q-p+1
     n2 = r-q
@@ -37,10 +40,23 @@ def merge_sort(arr, p, r):
         merge(arr, p, q, r)
 
 
+def test_merge_sort():
+    print("Starting performace test")    
+    n = 10000
+    max_limit = 500000
+    arr = random_array_generator(n, max_limit)
+    start_time = time.time()
+    merge_sort(arr, 0, len(arr)-1)
+    end_time = time.time()
+    print("Overall time taken: " + str(end_time-start_time))
+    print("Ending performace test")
+
 
 if __name__=='__main__':
     arr = [42, 23, 1, 10, 4, 16, 73, 100]
     print("Input: " + str(arr))
     merge_sort(arr, 0, len(arr)-1)
     print("Sorted array: " + str(arr))
+    test_merge_sort()
+
     

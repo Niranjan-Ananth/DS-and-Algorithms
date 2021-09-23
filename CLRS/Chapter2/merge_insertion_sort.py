@@ -1,4 +1,7 @@
-def insertion_sort(arr, l, r):       
+import time
+from array_generator import random_array_generator
+
+def insertion_sort(arr, l, r):     
     for j in range(l+1, r+1):
         i = j-1
         key = arr[j]
@@ -52,10 +55,22 @@ def merge_sort(arr, p, r, k):
     merge(arr, p, q, r)
 
 
+def test_merge_insertion_sort():
+    print("Starting performace test")    
+    n = 10000
+    max_limit = 500000
+    arr = random_array_generator(n, max_limit)
+    start_time = time.time()
+    merge_sort(arr, 0, len(arr)-1, 100)
+    end_time = time.time()
+    print("Overall time taken: " + str(end_time-start_time))
+    print("Ending performace test")
+
 
 if __name__=='__main__':
     arr = [42, 23, 1, 10, 4, 16, 73, 100, 67, 98, 33, 27, 53, 49, 89, 17]
     print("Input: " + str(arr))
     merge_sort(arr, 0, len(arr)-1, 4)
     print("Sorted array: " + str(arr))
+    test_merge_insertion_sort()
     

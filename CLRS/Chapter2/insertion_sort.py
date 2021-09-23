@@ -1,3 +1,6 @@
+import time
+from array_generator import random_array_generator
+
 def insertion_sort_ascending(arr):
     if arr is None:
         return None    
@@ -24,6 +27,17 @@ def insertion_sort_descending(arr):
     return arr
 
 
+def test_insertion_sort_ascending_performance():
+    print("Starting performace test")
+    n = 10000
+    max_limit = 500000
+    arr = random_array_generator(n, max_limit)
+    start_time = time.time()
+    insertion_sort_ascending(arr)
+    end_time = time.time()
+    print("Overall time taken: " + str(end_time-start_time))
+    print("Ending performace test")
+
 if __name__=='__main__':
     arr_a = [42, 23, 1, 10, 4, 16, 73, 100]
     arr_b = arr_a[:]  # Copying array a into a new array for the descending sort
@@ -31,4 +45,5 @@ if __name__=='__main__':
     insertion_sort_ascending(arr_a)
     insertion_sort_descending(arr_b)
     print("Sorted Ascending: " + str(arr_a))
-    print("Sorted Descending: " + str(arr_b))   
+    print("Sorted Descending: " + str(arr_b))
+    test_insertion_sort_ascending_performance()  

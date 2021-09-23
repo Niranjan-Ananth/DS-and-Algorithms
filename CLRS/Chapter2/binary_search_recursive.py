@@ -16,18 +16,18 @@ def binary_search_recursive(arr, element, low, high):
 
 
 def test_binary_search_recursive_performance():
-    print("Starting performace test")
-    start_time = time.time()
+    print("Starting performace test")    
     n = 100000
     max_limit = 500000
     elements_found = 0
     iterations = 10000
     arr = sorted_array_generator(n, max_limit)
+    start_time = time.time()
     for i in range(0, iterations):
         element = random_number_generator(max_limit)        
         result = binary_search_recursive(arr, element, 0, len(arr)-1)
         if result:
-            elements_found += 1    
+            elements_found += 1
     end_time = time.time()
     print("Number of elements found: " + str(elements_found))
     print("Number of elements not found: " + str(iterations - elements_found))

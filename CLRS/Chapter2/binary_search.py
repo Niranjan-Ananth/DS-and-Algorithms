@@ -16,13 +16,13 @@ def binary_search(arr, element):
 
 
 def test_binary_search_performance():
-    print("Starting performace test")
-    start_time = time.time()
+    print("Starting performace test")    
     n = 100000
     max_limit = 500000
     elements_found = 0
-    iterations = 100
+    iterations = 1000
     arr = sorted_array_generator(n, max_limit)
+    start_time = time.time()
     for i in range(0, iterations):
         element = random_number_generator(max_limit)        
         result = binary_search(arr, element)
