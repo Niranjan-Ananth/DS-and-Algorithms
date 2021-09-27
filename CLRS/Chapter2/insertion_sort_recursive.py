@@ -1,5 +1,5 @@
 import time
-from array_generator import random_array_generator
+from utils.array_generator import random_array_generator
 import sys
 
 def insertion_sort_recursive(arr, n):

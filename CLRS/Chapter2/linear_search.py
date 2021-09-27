@@ -1,5 +1,5 @@
 import time
-from array_generator import sorted_array_generator, random_number_generator
+from utils.array_generator import sorted_array_generator, random_number_generator
 
 def linear_search(arr, key):
     if arr is None:

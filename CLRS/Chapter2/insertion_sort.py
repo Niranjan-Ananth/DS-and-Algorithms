@@ -1,5 +1,5 @@
 import time
-from array_generator import random_array_generator
+from utils.array_generator import random_array_generator
 
 def insertion_sort_ascending(arr):
     if arr is None:

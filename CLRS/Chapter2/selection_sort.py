@@ -1,5 +1,5 @@
 import time
-from array_generator import random_array_generator
+from utils.array_generator import random_array_generator
 
 def selection_sort(arr):
     for i in range(0, len(arr)-1):

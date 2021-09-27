@@ -1,5 +1,5 @@
 import time
-from array_generator import random_array_generator
+from utils.array_generator import random_array_generator
 
 def insertion_sort(arr, l, r):     
     for j in range(l+1, r+1):

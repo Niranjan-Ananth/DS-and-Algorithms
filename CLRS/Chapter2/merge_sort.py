@@ -1,5 +1,5 @@
 import time
-from array_generator import random_array_generator
+from utils.array_generator import random_array_generator
 
 def merge(arr, p, q, r):
     n1 = q-p+1
